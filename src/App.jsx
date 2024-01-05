@@ -12,7 +12,6 @@ function App() {
 	const name = queryParameters.get("name");
 
 	// console.log("name==> ", name);
-	// console.log("name==> ", name);
 	// console.log("userId=> ", userId);
 	// console.log("jwtToken=> ", jwtToken);
 
