@@ -9,14 +9,16 @@
 	border-radius: 0;
 }
 
-.user-login-btn{
+.user-login-btn {
 	display: flex;
-	gap :5px
+	gap: 5px;
 }
 
-.user-login-a:hover img,.user-login-a:focus img{
+.user-login-a:hover img,
+.user-login-a:focus img {
 	/* filter: invert(21%) sepia(11%) saturate(1822%) hue-rotate(247deg) brightness(97%) contrast(89%); */
-	filter: invert(68%) sepia(44%) saturate(755%) hue-rotate(167deg) brightness(92%) contrast(93%);
+	filter: invert(68%) sepia(44%) saturate(755%) hue-rotate(167deg)
+		brightness(92%) contrast(93%);
 }
 
 /* .user-icon{
@@ -51,8 +53,92 @@
 }
 
 .navbank {
-	background-color: #4f3552;
+	background-color: #bdbdbd;
+	background-color: #ffffff;
 	z-index: 10;
+	box-shadow: 0 7px 15px rgba(0, 0, 0, 0.25);
+}
+
+.navbank .container-fluid {
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	gap: 2rem;
+	/* justify-content: center; */
+}
+
+.navbank ul {
+	list-style: none;
+}
+
+.navbank a {
+	/* padding-top: 15px; */
+	padding-bottom: 0;
+	font-size: 18px;
+	letter-spacing: -0.25px;
+	white-space: nowrap;
+	font-weight: 300;
+	/* height: 62px; */
+	color: rgb(51, 51, 51);
+}
+
+.nav-login-container a {
+	/* all: unset; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	letter-spacing: -0.25px;
+	white-space: nowrap;
+	font-weight: 300;
+	font-size: 13px !important;
+}
+
+.nav-login-container a p {
+}
+
+.navbank .container-fluid a {
+	text-decoration: none;
+}
+
+.nav-login-container svg path.b,
+.inner-homepage .loginprofile svg path.b,
+.searchicon svg path {
+	fill: var(--primary1);
+}
+
+.navbank .logo-container a picture {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	place-items: center;
+}
+
+.navbank .logo-container {
+	display: flex;
+	width: 20%;
+}
+
+.navbank .nav-links-container {
+	/* display: flex; */
+	width: 80%;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navbank .nav-links-container a {
+	padding: 0 1rem;
+	display: flex;
+	flex-flow: row;
+}
+
+.navbank .nav-login-container {
+	/* display: flex; */
+	width: 20%;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
 }
 
 .navretail {
@@ -742,7 +828,7 @@
 	background: #4f3552;
 }
 
-.foot-cont{
+.foot-cont {
 	margin-top: 50px;
 	margin-bottom: 50px;
 	color: white;
@@ -753,3 +839,7 @@
 	color: white;
 	text-decoration: none;
 }
+
+/* .qatar_table_burgundy {
+	text-align: center;
+} */

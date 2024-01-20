@@ -3,6 +3,8 @@ import { ToastContainer } from "react-toastify";
 
 import "./App.css";
 import Home from "./pages/Home";
+// import MyClass from "./pages/MyClass";
+import FeedBack from "./components/FeedBack";
 
 function App() {
 	const [user, setUser] = useState({});
@@ -39,6 +41,8 @@ function App() {
 		<div className="App">
 			<ToastContainer />
 			<Home user={user} setUser={setUser} />
+			{/* <MyClass /> */}
+			<FeedBack user={user}/>
 		</div>
 	);
 }

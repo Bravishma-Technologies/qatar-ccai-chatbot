@@ -43,6 +43,9 @@
 			href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
 			rel="stylesheet" />
 
+		<script>
+			sessionStorage.clear();
+		</script>
 		<!-- <script>
 			!(function (e, n, t, r) {
 				function s() {
@@ -221,15 +224,113 @@
     </script> -->
 
 		<script>
-			window.messengerReady = false;
-			AvMessagingSdk.init({
-				integrationId: "63738a64ee04730103580ae2",
-			})
-				.then(function () {
-					console.log("messengr initiated");
-					window.messengerReady = true;
-				})
-				.catch((err) => console.log("messengr err==> ", err));
+			// window.messengerReady = false;
+			// AvMessagingSdk.init({
+			// 	integrationId: "63738a64ee04730103580ae2",
+
+			// 	// prechatCapture: {
+			// 	// 	enabled: true,
+			// 	// 	enableEmailLinking: true,
+			// 	// 	fields: [
+			// 	// 		{
+			// 	// 			type: "email",
+			// 	// 			name: "email",
+			// 	// 			lable: "Email",
+			// 	// 			placeholder: "your@email.com",
+			// 	// 		},
+			// 	// 	],
+			// 	// },
+			// })
+			// 	.then(async function () {
+			// 		console.log("messengr initiated");
+			// 		window.messengerReady = true;
+			// 		// AvMessagingSdk.sendMessage({
+			// 		// 	type: "text",
+			// 		// 	text: "sendMessage called",
+			// 		// });
+			// 		// let user = await AvMessagingSdk.getUser();
+			// 		// console.log("user-----> ", user);
+
+			// 		// AvMessagingSdk.sendMessage({
+			// 		// 	type: "text",
+			// 		// 	text: "<h1>Hellew Ageant</h1>",
+			// 		// });
+			// 	})
+			// 	.catch((err) => console.log("messengr err==> ", err));
 		</script>
+
+		<!-- <link
+			rel="stylesheet"
+			href="
+https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css" />
+		<script src="
+https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+		<df-messenger
+			project-id="qatar-airlines-project-410914"
+			agent-id="6e46fd14-5d7f-4df0-b4a9-46ee8ad2a1e4"
+			language-code="en">
+			<df-messenger-chat chat-title="Qatar-airlines-chat">
+			</df-messenger-chat>
+		</df-messenger>
+		<style>
+			df-messenger {
+				z-index: 999;
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				top: 0;
+				width: 350px;
+			}
+		</style> -->
+
+		<link
+			rel="stylesheet"
+			href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css" />
+		<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+		<!-- <df-messenger
+		  project-id="qatar-airlines-project-410914"
+		  agent-id="6e46fd14-5d7f-4df0-b4a9-46ee8ad2a1e4"
+		  language-code="en">
+		  <df-messenger-chat-bubble
+		   chat-title="Qatar-airlines-chat">
+		  </df-messenger-chat-bubble>
+		</df-messenger>
+		<style>
+		  df-messenger {
+			z-index: 999;
+			position: fixed;
+			bottom: 16px;
+			right: 16px;
+		  }
+		</style> -->
+
+		<df-messenger
+			project-id="qatar-airlines-project-410914"
+			agent-id="6e46fd14-5d7f-4df0-b4a9-46ee8ad2a1e4"
+			language-code="en">
+			<df-messenger-chat-bubble
+				bot-actor-image="https://logos-world.net/wp-content/uploads/2020/03/Qatar-Airways-Symbol.png"
+				chat-title="Q-Bot"
+				chat-title-icon="https://logos-world.net/wp-content/uploads/2020/03/Qatar-Airways-Symbol.png">
+			</df-messenger-chat-bubble>
+		</df-messenger>
+		<style>
+			df-messenger {
+				z-index: 999;
+				position: fixed;
+				bottom: 16px;
+				right: 16px;
+				/* --df-messenger-message-user-background:#8e2157;
+       --df-messenger-message-user-font-color:#000; */
+				--df-messenger-message-bot-background: #8e2157;
+				--df-messenger-message-bot-font-color: #fff;
+				--df-messenger-chat-background: #fff;
+				--df-messenger-input-background: #fff;
+				--df-messenger-chat-padding: 24px 8px 8px 0px;
+				--df-messenger-message-bot-margin-right: 20px;
+				--df-messenger-chat-bubble-background-color: #8e2157;
+				/* --df-messenger-message-font-size:14px; */
+			}
+		</style>
 	</body>
 </html>

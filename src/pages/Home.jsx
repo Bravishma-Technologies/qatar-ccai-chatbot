@@ -8,8 +8,8 @@ import LoginForm from "../components/LoginForm";
 import "./Home.css";
 
 import roundedRect from "../assets/roundedRect.svg";
-import bgImg from "../assets/images/bg.jpg";
-import logoImg from "../assets/images/logo.png";
+// import bgImg from "../assets/images/bg.jpg";
+// import logoImg from "../assets/images/logo.png";
 
 import Main from "../components/Main";
 import Login from "../components/Login";
@@ -23,6 +23,16 @@ const Home = ({ user, setUser }) => {
 			setUserPresent(true);
 		}
 	}, [user]);
+
+	useEffect(() => {
+		let usr = localStorage.getItem("user-details");
+		console.log("=====found usr==========> ", JSON.parse(usr));
+		if (usr) {
+			setUser(JSON.parse(usr));
+			setUserPresent(true);
+		}
+		return () => {};
+	}, []);
 
 	// console.log("userPresent====> ", userPresent);
 
@@ -54,7 +64,11 @@ const Home = ({ user, setUser }) => {
 
 	return (
 		<div className="container-man">
-			<NavBar user={user} />
+			<NavBar
+				user={user}
+				setUser={setUser}
+				setUserPresent={setUserPresent}
+			/>
 			<div className="container-content">
 				{userPresent ? (
 					<Main />
