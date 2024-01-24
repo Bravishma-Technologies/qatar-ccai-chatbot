@@ -114,12 +114,12 @@ const FeedBack = ({ user }) => {
 								value={Email}
 							/>
 
-							<label htmlFor="Sessoon ID ">Sessoon ID :</label>
+							<label htmlFor="Session ID ">Session ID :</label>
 							<input
 								type="text"
-								id="Sessoonid"
-								name="Sessoonid"
-								placeholder="Enter your Sessoonid"
+								id="Sessionid"
+								name="Sessionid"
+								placeholder="Enter your Sessionid"
 								value={SessionId}
 								onChange={(e) => setSessionId(e.target.value)}
 							/>
